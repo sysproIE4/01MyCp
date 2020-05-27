@@ -21,10 +21,10 @@
   最後にコピーしたファイルの内容が元の10KiBのファイルと同じことを確認する．
 
   ```
-  $ dd if=/dev/random of=srcfile bs=1024 count=10 # ランダムな内容の
-  10+0 records in                                 # 10KiBのファイルを作成する
+  $ dd if=/dev/urandom of=srcfile bs=1024 count=10 # ランダムな内容の
+  10+0 records in                                  # 10KiBのファイルを作成する
   10+0 records out 10240 bytes transferred in 0.001528 secs (6701462 bytes/sec)
-  $ mycp2 srcfile destfile                        # mycp2 プログラムを実行する
-  $ cmp srcfile destfile                          # コピー元とコピー先ファイルを比較する
-  $                                               # 内容が同じなら何も表示されない
+  $ mycp2 srcfile destfile                         # mycp2 プログラムを実行する
+  $ cmp srcfile destfile                           # コピー元とコピー先ファイルを比較する
+  $                                                # 内容が同じなら何も表示されない
   ```
